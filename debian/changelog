@@ -1,5 +1,24 @@
-template-repository (1.0-1) unstable; urgency=medium
+pytest-golden (0.2.2-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
+  * debian/control: Build-Depends: Add <!nocheck> to python3-pytest.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Edward Betts <edward@4angle.com>  Thu, 28 Jul 2022 15:57:12 +0100
+
+pytest-golden (0.2.1-3) unstable; urgency=medium
+
+  * debian/upstream/metadata: fix github URLs.
+
+ -- Edward Betts <edward@4angle.com>  Tue, 19 Jul 2022 15:14:42 +0100
+
+pytest-golden (0.2.1-2) unstable; urgency=medium
+
+  * Source-only upload to allow package to migrate to testing.
+
+ -- Edward Betts <edward@4angle.com>  Thu, 07 Jul 2022 20:21:53 +0100
+
+pytest-golden (0.2.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1013980)
+
+ -- Edward Betts <edward@4angle.com>  Tue, 28 Jun 2022 13:11:55 +0100

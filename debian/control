@@ -1,15 +1,28 @@
-Source: template-repository
-Section: unknown
+Source: pytest-golden
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Edward Betts <edward@4angle.com>
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-python3,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-atomicwrites,
+               python3-poetry,
+               python3-pytest <!nocheck>,
+               python3-ruamel.yaml,
+               python3-testfixtures <!nocheck>
+Rules-Requires-Root: no
+Standards-Version: 4.6.1
+Homepage: https://github.com/oprypin/pytest-golden
+Vcs-Browser: https://salsa.debian.org/python-team/packages/pytest-golden
+Vcs-Git: https://salsa.debian.org/python-team/packages/pytest-golden.git
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-pytest-golden
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Plugin for pytest that offloads expected outputs to data files
+ Expected output for test functions is stored in a YAML file.
+ .
+ The expected output can be updated by running pytest --update-goldens to
+ automatically re-populate the output.

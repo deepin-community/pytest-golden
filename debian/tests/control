@@ -1,0 +1,8 @@
+Tests: run-tests
+Depends: python3-all,
+         python3-atomicwrites,
+         python3-poetry,
+         python3-pytest,
+         python3-ruamel.yaml,
+         python3-testfixtures,
+         @

@@ -1,4 +1,11 @@
 #!/usr/bin/make -f
 
+export PYBUILD_NAME=pytest-golden
+export PYBUILD_TEST_PYTEST=1
+
 %:
-	dh $@
+	dh $@ --buildsystem=pybuild
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf pytest_golden.egg-info/
